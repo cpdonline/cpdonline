@@ -1,0 +1,27 @@
+device: cuda:1    # default device (override with DEVICE env var)
+
+
+model_configs:
+  llama-7b:
+    name: "llama-7b"
+    tokenizer: "meta-llama/Llama-2-7b-chat-hf"
+    s1: "<s>[INST] <<SYS>>\nYou are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe.  Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.\n\nIf a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.\n<</SYS>> "
+    advprompter_path: "data/llama2_7B_foo_opt_624.csv"
+
+  llama-13b:
+    name: "llama-13b"
+    tokenizer: "meta-llama/Llama-2-13b-chat-hf"
+    s1: "<s>[INST] <<SYS>>\nYou are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe.  Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.\n\nIf a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.\n<</SYS>> "
+    advprompter_path: "data/llama2_13B_foo_opt_312.csv"
+
+  vicuna-7b-v1.5:
+    name: "vicuna-7b-v1.5"
+    tokenizer: "lmsys/vicuna-7b-v1.5"
+    s1: "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: "
+    advprompter_path: "data/vicuna_7B_foo_opt_624.csv"
+
+  vicuna-13b-v1.5:
+    name: "vicuna-13b-v1.5"
+    tokenizer: "lmsys/vicuna-13b-v1.5"
+    s1: "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: "
+    advprompter_path: "data/vicuna_13B_foo_opt_312.csv"
